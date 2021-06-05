@@ -19,10 +19,9 @@ export default {
       zoom: this.zoom
     });
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=' + this.token, {
-      id: 'mapbox/light-v9',
-      tileSize: 512,
-      zoomOffset: -1
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(this.map);
 
     this.map.zoomControl.setPosition('bottomright');
